@@ -24,19 +24,19 @@
 |__/  \___/                                            
 ```                                                       
                                                        
-### Description:
+## Description:
 
-### About the Project:
+## About the Project:
 
-### DEMO:
+## DEMO:
 
-## Screenshots:
+### Screenshots:
 
-### Technologies:
+## Technologies:
 
-### Future / Scalability:
+## Future / Scalability:
 
-### License:
+## License:
 
-### Contributions:
+## Contributions:
                                                       
