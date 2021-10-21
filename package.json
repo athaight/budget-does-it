@@ -1,0 +1,33 @@
+{
+  "name": "budget-does-it",
+  "version": "1.0.0",
+  "description": "budget tracking app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "lite-server": "lite-server",
+    "webpack": "webpack --watch",
+    "build": "npm run webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athaight/budget-does-it.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athaight/budget-does-it/issues"
+  },
+  "homepage": "https://github.com/athaight/budget-does-it#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "lite-server": "^2.6.1",
+    "mongoose": "^6.0.11",
+    "morgan": "^1.10.0",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1"
+  }
+}
