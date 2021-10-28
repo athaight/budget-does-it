@@ -48,7 +48,11 @@ function populateChart() {
   // create date labels for chart
   let labels = reversed.map(t => {
     let date = new Date(t.date);
-    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+    let hours = date.getHours();
+    let minutes = String(date.getMinutes()).padStart(2, "0");
+    let ampm = hours >= 12 ? 'pm' : 'am';
+    hours = (hours % 12) || 12;
+    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} ${hours + ':' + minutes + ampm} `;
   });
 
   // create incremental values for chart
@@ -72,6 +76,7 @@ function populateChart() {
             label: "Total Over Time",
             fill: true,
             backgroundColor: "#6666ff",
+            hoverBackgroundColor: "#ff66e5",
             data
         }]
     }

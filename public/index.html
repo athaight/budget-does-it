@@ -6,26 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#317EFB">
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./styles.css">
 
-  <title>Budget Tracker</title>
+  <title>Budget Does It</title>
 </head>
+<header class="navbar">
+  <nav class="teal lighten">
+    <div class="nav">
+      <a href="#" class="brand-logo center">Budget Does It</a>
+    </div>
+  </nav>
+</header>
 <body>
+  <div class="container">
   <div class="wrapper">
     <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
+      <div class="total">💰Your total is: $<span id="total">0</span></div>
     </div>
-
+    <div class="container">
     <div class="form">
       <input type="text" id="t-name" placeholder="Name of transaction" />
       <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+      <div class="button-box">
+      <button class="waves-light btn" id="add-btn"><i class="fa fa-plus buttons p-2"></i> 💵 Add Funds</button>
+      <button class="waves-light btn" id="sub-btn"><i class="fa fa-minus"></i> 💸 Subtract Funds</button>
       <p class="error"></p>
     </div>
-
+    </div>
+  </div>
     <div class="transactions">
       <table>
         <thead>
@@ -40,6 +52,7 @@
     
     <canvas id="myChart"></canvas>
   </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>

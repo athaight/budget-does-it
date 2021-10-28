@@ -3,6 +3,23 @@ body {
   font-family: Arial;
 }
 
+.navbar {
+  margin-bottom: 10rem;
+}
+
+
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+}
+
+button {
+  width: 200px;
+}
+
 button, input {
   font-size: 100%;
   font-family: Arial;
@@ -35,6 +52,7 @@ tr:nth-child(even) {
 .total {
   font-size: 150%;
   text-decoration: underline;
+  margin-bottom: 3rem;
 }
 
 .form {
@@ -48,4 +66,5 @@ tr:nth-child(even) {
   overflow: auto;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
