@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#317EFB">
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -17,16 +18,13 @@
 <header class="navbar">
   <nav class="teal lighten">
     <div class="nav">
-      <a href="#" class="brand-logo center">Budget Does It</a>
+      <div class="total brand-logo center">💰Your total is: $<span id="total">0</span></div>
     </div>
   </nav>
 </header>
 <body>
   <div class="container">
   <div class="wrapper">
-    <div class="total">
-      <div class="total">💰Your total is: $<span id="total">0</span></div>
-    </div>
     <div class="container">
     <div class="form">
       <input type="text" id="t-name" placeholder="Name of transaction" />
@@ -53,7 +51,52 @@
     <canvas id="myChart"></canvas>
   </div>
 </div>
+<div class="container">
+<h1>JS SDK</h1>   
+<input id="username" type="text" placeholder="Username"/>
+<input id="email" type="email" placeholder="Email"/>
+<input id="password" type="password" placeholder="Password" />
+<button id="createButton">Create User</button>
+</div>
 
+
+<script>
+  
+  const Parse = require('parse/node');
+Parse.initialize("9F2B2c2xgJmwataDTA7GGdxitPgKUJTuQt0wFxh7","NCvtmzf0UQeLr5CatnlxvjIz8EEg3sxOokloYxrB"); 
+
+
+async function createParseUser() {
+  // Creates a new Parse "User" object, which is created by default in your Parse app
+  let user = new Parse.User();
+  // Set the input values to the new "User" object
+  user.set("username", document.getElementById("username").value);
+  user.set("email", document.getElementById("email").value);
+  user.set("password", document.getElementById("password").value);
+  try {
+    // Call the save method, which returns the saved object if successful
+    user = await user.save();
+    if (user !== null) {
+      // Notify the success by getting the attributes from the "User" object, by using the get method (the id attribute needs to be accessed directly, though)
+      alert(
+        `New object created with success! ObjectId: ${
+          user.id
+        }, ${user.get("username")}`
+      );
+    }
+  } catch (error) {
+    alert(`Error: ${error.message}`);
+  }
+}
+
+// Add on click listener to call the create parse user function
+document.getElementById("createButton").addEventListener("click", async function () {
+  createParseUser();
+});
+
+Parse.serverURL = 'https://parseapi.back4app.com/'
+
+</script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
 </body>
