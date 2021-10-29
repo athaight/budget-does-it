@@ -3,11 +3,6 @@ body {
   font-family: Arial;
 }
 
-.navbar {
-
-}
-
-
 .button-box {
   display: flex;
   flex-direction: row;
