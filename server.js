@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // TODO THink the issue is here
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/schools-db', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/BudgetStore', {
   useNewUrlParser: true,
   // useFindAndModify: false,
   useUnifiedTopology: true
