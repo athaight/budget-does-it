@@ -46,8 +46,10 @@ Having offline functionality is paramount to our applications success.
 This app is part of the curriculum for the U of A / Trilogy Education Services Full Stack Coding Bootcamp.
 
 ## DEMO:
+https://user-images.githubusercontent.com/69359454/139711434-b936ac41-7b04-466a-bf94-e018b7a9041a.mp4
 
 ### Screenshots:
+![Budget Does It - Google Chrome 11_1_2021 9_56_52 AM](https://user-images.githubusercontent.com/69359454/139711484-2663951c-8b86-4783-85c1-b3be22e8b103.png)
 
 ## Technologies:
 JavaScript, MongoDB/Mongoose, Morgan, Node.js/Express, lite-server, compression
